@@ -12,10 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('planets', function (Blueprint $table) {
+            $table->tinyIncrements('id');
             $table->string('ja_name');
             $table->string('en_name');
             $table->integer('radius');
             $table->integer('weight');
+            $table->timestamps();
         });
     }
 
